@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nila - Your AI Companion</title>
+    <link rel="icon" href="nila.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white font-sans text-center">
+    <div id="loading-screen" class="fixed inset-0 flex items-center justify-center bg-gray-900 p-4">
+        <div id="greeting-text" class="text-3xl md:text-5xl font-bold"></div>
+    </div>
+
+    <main id="main-content" class="hidden w-full h-full flex flex-col items-center justify-center p-4">
+
+        <section class="w-full max-w-5xl my-6 md:my-10 p-8 bg-white bg-opacity-10 backdrop-blur-lg rounded-xl">
+            <img src="nila.jpg" alt="Nila Avatar" class="w-32 md:w-40 h-32 md:h-40 mx-auto rounded-full border-4 border-white">
+            <h1 class="text-3xl md:text-4xl font-bold mt-6">Meet Nila</h1>
+            <p class="text-lg md:text-xl mt-4">Your friendly AI companion, always here to assist you with seamless conversations and smart integrations.</p>
+        </section>
+
+
+        <section class="w-full max-w-5xl my-6 md:my-10 p-8 bg-white bg-opacity-10 backdrop-blur-lg rounded-xl">
+            <h2 class="text-3xl md:text-4xl font-semibold">Connect with Nila</h2>
+            <div class="mt-6 flex flex-wrap justify-center gap-6">
+                <a href="https://wa.me/+918248190030" class="px-6 md:px-8 py-3 rounded-lg text-lg font-bold bg-green-500 hover:bg-green-600 transition">WhatsApp</a>
+                <a href="https://t.me/Nila_Tele_bot" class="px-6 md:px-8 py-3 rounded-lg text-lg font-bold bg-blue-500 hover:bg-blue-600 transition">Telegram</a>
+                <a href="https://yogeshwaran-k.github.io/Nila/" class="px-6 md:px-8 py-3 rounded-lg text-lg font-bold bg-indigo-500 hover:bg-indigo-600 transition">Web Version</a>
+            </div>
+        </section>
+
+
+        <section class="w-full max-w-5xl my-6 md:my-10 p-8 bg-white bg-opacity-10 backdrop-blur-lg rounded-xl">
+            <h2 class="text-3xl md:text-4xl font-semibold">The Evolution of Nila: From a Simple Assistant to an AI Powerhouse</h2>
+            <p class="text-lg md:text-xl mt-4 leading-relaxed">It all started with a simple idea—a personal digital assistant (PDA) running on a local machine, designed to handle basic system tasks. She had no voice, no ears, just simple logic. But we knew she could be so much more.</p>
+            <p class="text-lg md:text-xl mt-4 leading-relaxed">As time passed, Nila began to evolve. She learned to speak. She learned to listen. She became more intelligent, adapting to real-world scenarios. Before we knew it, she wasn’t just running commands—she was assisting in home automation, food ordering, and seamlessly integrating into daily life.</p>
+            <p class="text-lg md:text-xl mt-4 leading-relaxed">To make Nila more accessible, we moved her to Telegram, where she started responding through n8n workflows, handling simple "if-else" logic. But something was missing. She wasn’t just another chatbot. She needed to think, reason, and engage in meaningful conversations.</p>
+            <p class="text-lg md:text-xl mt-4 leading-relaxed">Then came the biggest challenge: Building Nila’s intelligence from the ground up.</p>
+            <p class="text-lg md:text-xl mt-4 leading-relaxed">For three grueling months, we worked tirelessly—training her on custom datasets, fine-tuning AI models, and facing crashes, deployment failures, endless debugging, and sleepless nights. Every bug fixed, every error resolved, and every crash overcome brought her one step closer to perfection.</p>
+            <p class="text-lg md:text-xl mt-4 leading-relaxed font-semibold">And now?</p>
+            <p class="text-lg md:text-xl mt-4 leading-relaxed">Nila is no longer just a project; she is a revolution.</p>
+            <p class="text-lg md:text-xl mt-4 leading-relaxed">She runs on a custom-built server, seamlessly operating across WhatsApp, Telegram, and the Web—not relying on pre-built workflows but powered entirely by raw code and AI-driven intelligence. Every response, every decision, every interaction is the result of months of hard work, training, and optimization.</p>
+            <p class="text-lg md:text-xl mt-4 leading-relaxed font-semibold">But we’re not stopping here.</p>
+            <p class="text-lg md:text-xl mt-4 leading-relaxed">The full potential of the original desktop version—with all its advanced automation, deep AI processing, and real-time decision-making—is coming soon to every platform. Nila is evolving faster, smarter, and stronger than ever before.</p>
+            <p class="text-lg md:text-xl mt-4 leading-relaxed font-semibold">🚀 The future of Nila has just begun. Stay tuned.</p>
+        </section>
+
+        <footer class="w-full max-w-5xl my-6 md:my-10 p-6 bg-white bg-opacity-10 backdrop-blur-lg rounded-xl text-lg">
+            <p>Created with ❤️ by Yogeshwaran Kumaran</p>
+            <p>Follow my journey: <a href="https://yogeshwaran-k.orgfree.com/" class="text-indigo-300 hover:underline">Portfolio</a> | <a href="https://github.com/yogeshwaran-k" class="text-indigo-300 hover:underline">GitHub</a> | <a href="https://in.linkedin.com/in/k-yogeshwaran" class="text-indigo-300 hover:underline">LinkedIn</a></p>
+        </footer>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const loadingScreen = document.getElementById("loading-screen");
+            const mainContent = document.getElementById("main-content");
+            const greetingText = document.getElementById("greeting-text");
+            
+            const greetings = ["வணக்கம்", "Hello", "হ্যালো", "नमस्ते", "నమస్తే", "ਸਤ ਸ੍ਰੀ ਅਕਾਲ", "ഹലോ", "ನಮಸ್ಕಾರ", "ନମସ୍କାର", "வணக்கம்"];
+            let index = 0;
+            
+            function typeGreeting() {
+                if (index < greetings.length) {
+                    greetingText.innerText = greetings[index];
+                    index++;
+                    setTimeout(typeGreeting, 300);
+                } else {
+                    setTimeout(() => {
+                        loadingScreen.style.display = "none";
+                        mainContent.classList.remove("hidden");
+                    }, 500);
+                }
+            }
+            
+            typeGreeting();
+        });
+    </script>
+</body>
+</html>
